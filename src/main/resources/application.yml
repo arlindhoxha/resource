@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: resource-service
+#  datasource:
+#    driver-class-name:
+#    type:
+#    url:
+#    username:
+#    password:
+#    hikari:
+#      pool-name: ResourceHikariPool
+#      auto-commit: true
+#      connection-timeout: 10000
+#      allow-pool-suspension: true
+#      validation-timeout: 5000
+#      max-lifetime: 120000
+#      register-mbeans: true
+#      keepalive-time: 60000
+#      connection-init-sql: SELECT 1
+#      leak-detection-threshold: 5000
+#      idle-timeout: 20000
+#      data-source-properties:
+#        use-server-prep-stmts: true
+#      minimum-idle: 2
+#      maximum-pool-size: 5
+#  jpa:
+#    show-sql: false
+#    hibernate:
+#      ddl-auto: none
+#    properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+
+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 40
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+
+server:
+  port: 9001
